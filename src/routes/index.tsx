@@ -121,23 +121,19 @@ function Index() {
             <Socials className="text-white" />
           </header>
 
-          <div className="flex flex-1 items-center justify-end pt-16 pb-24 md:pb-32">
-            <div className="max-w-xl text-left md:text-right">
-              <h1 className="font-display text-[2.2rem] leading-[1.12] tracking-wide uppercase md:text-[3.4rem]">
+          <div className="flex flex-1 items-center justify-end pt-14 pb-24 md:pb-32">
+            <div className="w-full max-w-2xl text-left md:pl-24">
+              <h1 className="font-display text-[2.3rem] leading-[1.18] tracking-wide uppercase md:text-[3.6rem]">
                 Ideias bem direcionadas geram grandes resultados.
               </h1>
-              <p className="mt-5 text-sm leading-relaxed text-white/70 md:text-base">
-                Produção criativa recorrente, white label e sob demanda para
-                agências de marketing.
-              </p>
               <a
                 href={WHATSAPP}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-8 inline-flex items-center gap-3 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[0_18px_50px_-15px_oklch(0.58_0.23_262/0.9)] transition hover:brightness-110"
+                className="mt-10 inline-flex items-center gap-3 rounded-full bg-primary py-2.5 pr-2.5 pl-7 text-sm font-semibold text-primary-foreground shadow-[0_18px_50px_-15px_oklch(0.58_0.23_262/0.9)] transition hover:brightness-110 md:text-base"
               >
                 Quero falar sobre meu projeto
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-primary">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-lg text-primary">
                   ›
                 </span>
               </a>
