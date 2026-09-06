@@ -133,7 +133,7 @@ function Index() {
 
           <div className="flex flex-1 items-center justify-end pt-14 pb-24 md:pb-32">
             <div className="w-full max-w-2xl text-left md:pl-24">
-              <h1 className="font-display text-[2.3rem] leading-[1.18] tracking-wide uppercase md:text-[3.6rem]">
+              <h1 className="font-display text-[1.9rem] leading-[1.22] tracking-wide uppercase md:text-[3.6rem]">
                 Ideias bem direcionadas <span className="whitespace-nowrap">geram grandes</span> resultados.
               </h1>
               <a
