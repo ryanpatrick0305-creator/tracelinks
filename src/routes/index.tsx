@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import heroAsset from "@/assets/hero.png.asset.json";
+import bgHero from "@/assets/bg-hero.jpg.asset.json";
 import bgAsset from "@/assets/bg.jpg.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
 import cardTrabalhos from "@/assets/card-trabalhos.png.asset.json";
@@ -104,76 +104,50 @@ function LinkCard({
 function Index() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      {/* HERO */}
-      <section className="relative">
-        {/* Desktop: peça original da primeira sessão */}
-        <div className="relative hidden md:block">
-          <img
-            src={heroAsset.url}
-            alt="Studio Trace — Ideias bem direcionadas geram grandes resultados"
-            className="w-full"
-          />
-          <h1 className="sr-only">Ideias bem direcionadas geram grandes resultados.</h1>
-          <a
-            href="/"
-            aria-label="Studio Trace"
-            className="absolute left-[5.5%] top-[7.5%] h-[6%] w-[12%]"
-          />
-          {[
-            { href: WHATSAPP, label: "WhatsApp", left: "83.8%", width: "3.2%" },
-            { href: INSTAGRAM, label: "Instagram", left: "86.9%", width: "3%" },
-            { href: BEHANCE, label: "Behance", left: "89.9%", width: "3.3%" },
-          ].map((s) => (
-            <a
-              key={s.label}
-              href={s.href}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={s.label}
-              style={{ left: s.left, width: s.width }}
-              className="absolute top-[8.4%] h-[4.5%] rounded-full transition hover:bg-white/15"
-            />
-          ))}
-          <a
-            href={WHATSAPP}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Quero falar sobre meu projeto"
-            className="absolute left-[48.3%] top-[66.5%] h-[6%] w-[24.5%] rounded-full transition hover:bg-white/10"
-          />
-        </div>
+      {/* HERO — composição sobre o fundo BG primeira sessão */}
+      <section
+        className="relative bg-cover bg-center"
+        style={{ backgroundImage: `url(${bgHero.url})` }}
+      >
+        {/* Leitura do conteúdo à direita + fundido suave com a seção seguinte */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/35" />
+        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-background md:h-64" />
 
-        {/* Mobile: composição com fundo, logo e headline */}
-        <div
-          className="relative flex min-h-[100svh] flex-col justify-between bg-cover bg-center px-6 py-8 md:hidden"
-          style={{ backgroundImage: `url(${bgAsset.url})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black" />
-          <div className="relative flex items-center justify-between">
-            <img src={logoAsset.url} alt="Studio Trace" className="h-7 w-auto" />
-            <Socials className="text-white" />
-          </div>
-          <div className="relative pb-10">
-            <p className="font-display text-[2.1rem] leading-[1.15] tracking-wide uppercase">
-              Ideias bem direcionadas geram grandes resultados.
-            </p>
-            <a
-              href={WHATSAPP}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-7 inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:brightness-110"
-            >
-              Quero falar sobre meu projeto
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-primary">
-                ›
-              </span>
+        <div className="relative mx-auto flex min-h-[92svh] max-w-6xl flex-col px-6 py-7 md:px-10">
+          <header className="flex items-center justify-between">
+            <a href="/" aria-label="Studio Trace">
+              <img src={logoAsset.url} alt="Studio Trace" className="h-7 w-auto md:h-8" />
             </a>
+            <Socials className="text-white" />
+          </header>
+
+          <div className="flex flex-1 items-center justify-end pt-16 pb-24 md:pb-32">
+            <div className="max-w-xl text-left md:text-right">
+              <h1 className="font-display text-[2.2rem] leading-[1.12] tracking-wide uppercase md:text-[3.4rem]">
+                Ideias bem direcionadas geram grandes resultados.
+              </h1>
+              <p className="mt-5 text-sm leading-relaxed text-white/70 md:text-base">
+                Produção criativa recorrente, white label e sob demanda para
+                agências de marketing.
+              </p>
+              <a
+                href={WHATSAPP}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8 inline-flex items-center gap-3 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[0_18px_50px_-15px_oklch(0.58_0.23_262/0.9)] transition hover:brightness-110"
+              >
+                Quero falar sobre meu projeto
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-primary">
+                  ›
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CARDS */}
-      <section className="mx-auto grid max-w-4xl gap-8 px-5 py-14 md:gap-10 md:py-24">
+      <section className="relative mx-auto grid max-w-4xl gap-8 px-5 py-14 md:gap-10 md:py-24">
         <LinkCard
           href={BEHANCE}
           src={cardTrabalhos.url}
@@ -196,6 +170,8 @@ function Index() {
         className="relative bg-cover bg-center"
         style={{ backgroundImage: `url(${bgAsset.url})` }}
       >
+        {/* Fundido suave no topo do rodapé */}
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
         <div className="absolute inset-0 bg-black/70" />
         <div className="relative mx-auto flex max-w-4xl flex-col items-center gap-3 px-5 py-16 text-center text-[11px] tracking-wide text-muted-foreground md:flex-row md:justify-between md:py-24 md:text-left">
           <p>© 2026 Studio Trace. Todos os direitos reservados.</p>
