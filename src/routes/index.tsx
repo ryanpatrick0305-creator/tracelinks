@@ -119,9 +119,21 @@ function Index() {
             aria-label="Studio Trace"
             className="absolute left-[5.5%] top-[7.5%] h-[6%] w-[12%]"
           />
-          <div className="absolute right-[3%] top-[7.5%] flex h-[5%] items-center">
-            <Socials className="scale-90 text-white" />
-          </div>
+          {[
+            { href: WHATSAPP, label: "WhatsApp", left: "83.8%", width: "3.2%" },
+            { href: INSTAGRAM, label: "Instagram", left: "86.9%", width: "3%" },
+            { href: BEHANCE, label: "Behance", left: "89.9%", width: "3.3%" },
+          ].map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={s.label}
+              style={{ left: s.left, width: s.width }}
+              className="absolute top-[8.4%] h-[4.5%] rounded-full transition hover:bg-white/15"
+            />
+          ))}
           <a
             href={WHATSAPP}
             target="_blank"
