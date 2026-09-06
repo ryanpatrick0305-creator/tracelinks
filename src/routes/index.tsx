@@ -7,9 +7,10 @@ import cardTrabalhos from "@/assets/card-trabalhos.png.asset.json";
 import cardContato from "@/assets/card-contato.png.asset.json";
 import cardTrace from "@/assets/card-trace.png.asset.json";
 
-const WHATSAPP = "https://wa.me/5500000000000";
-const INSTAGRAM = "https://instagram.com/";
-const BEHANCE = "https://behance.net/";
+const WHATSAPP = "https://wa.me/5531984815068";
+const INSTAGRAM = "https://www.instagram.com/ryan_patrick_oliveira/";
+const BEHANCE = "https://www.behance.net/ryansoares4";
+const TRACE_LP = "https://lp.studiotrace.com.br/";
 
 export const Route = createFileRoute("/")({
   head: () => ({
