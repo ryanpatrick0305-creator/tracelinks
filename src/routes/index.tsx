@@ -131,10 +131,10 @@ function Index() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-10 inline-flex items-center gap-3 rounded-full bg-primary py-2.5 pr-2.5 pl-7 text-sm font-semibold text-primary-foreground shadow-[0_18px_50px_-15px_oklch(0.58_0.23_262/0.9)] transition hover:brightness-110 md:text-base"
+                className="group mt-10 inline-flex items-center gap-3 rounded-full bg-primary py-2.5 pr-2.5 pl-7 text-sm font-semibold text-primary-foreground shadow-[0_18px_50px_-15px_oklch(0.58_0.23_262/0.9)] transition-all duration-300 hover:scale-105 hover:shadow-[0_22px_60px_-15px_oklch(0.58_0.23_262/1)] hover:brightness-110 md:text-base"
               >
                 Quero falar sobre meu projeto
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-lg text-primary">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-lg text-primary transition-transform duration-300 group-hover:translate-x-0.5 group-hover:bg-white/95">
                   ›
                 </span>
               </a>
