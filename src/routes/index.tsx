@@ -110,7 +110,7 @@ function Index() {
       <section className="relative bg-cover bg-center">
         {/* Fundo mobile (apenas o background anexado) e desktop (com retrato) */}
         <div
-          className="absolute inset-0 bg-cover bg-center md:hidden"
+          className="absolute inset-0 bg-cover bg-center opacity-85 md:hidden"
           style={{ backgroundImage: `url(${bgHeroMobile.url})` }}
         />
         <div
@@ -120,6 +120,7 @@ function Index() {
 
         {/* Leitura do conteúdo à direita + fundido suave com a seção seguinte */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/35" />
+        <div className="absolute inset-0 bg-black/20 md:hidden" />
         <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-background md:h-64" />
 
         <div className="relative mx-auto flex min-h-[92svh] max-w-6xl flex-col px-6 py-7 md:px-10">
