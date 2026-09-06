@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import bgHero from "@/assets/bg-hero.jpg.asset.json";
+import bgHeroMobile from "@/assets/bg-hero-mobile.jpg.asset.json";
 import bgAsset from "@/assets/bg.jpg.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
 import cardTrabalhos from "@/assets/card-trabalhos.png.asset.json";
@@ -106,10 +107,17 @@ function Index() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* HERO — composição sobre o fundo BG primeira sessão */}
-      <section
-        className="relative bg-cover bg-center"
-        style={{ backgroundImage: `url(${bgHero.url})` }}
-      >
+      <section className="relative bg-cover bg-center">
+        {/* Fundo mobile (apenas o background anexado) e desktop (com retrato) */}
+        <div
+          className="absolute inset-0 bg-cover bg-center md:hidden"
+          style={{ backgroundImage: `url(${bgHeroMobile.url})` }}
+        />
+        <div
+          className="absolute inset-0 hidden bg-cover bg-center md:block"
+          style={{ backgroundImage: `url(${bgHero.url})` }}
+        />
+
         {/* Leitura do conteúdo à direita + fundido suave com a seção seguinte */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/35" />
         <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-background md:h-64" />
