@@ -141,9 +141,9 @@ function Index() {
           </div>
 
           {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-3">
-            <div className="h-16 w-px bg-gradient-to-b from-transparent via-primary/80 to-transparent md:h-24" />
-            <span className="text-[10px] font-medium tracking-[0.25em] text-white/60 uppercase">
+          <div className="absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2">
+            <div className="h-10 w-px bg-gradient-to-b from-transparent via-white/30 to-transparent md:h-14" />
+            <span className="text-[9px] font-light tracking-[0.3em] text-white/40 uppercase">
               Role
             </span>
           </div>
