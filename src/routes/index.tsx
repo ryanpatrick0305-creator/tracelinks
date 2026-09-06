@@ -164,7 +164,7 @@ function Index() {
           alt="Entre em contato — vamos conversar sobre seu projeto"
         />
         <LinkCard
-          href={INSTAGRAM}
+          href={TRACE_LP}
           src={cardTrace.url}
           alt="Conheça a Trace — produção criativa recorrente"
         />
