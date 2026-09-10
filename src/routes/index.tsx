@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import bgHero from "@/assets/bg-hero.jpg.asset.json";
-import bgHeroMobile from "@/assets/bg-hero-mobile.jpg.asset.json";
-import bgAsset from "@/assets/bg.jpg.asset.json";
-import logoAsset from "@/assets/logo.png.asset.json";
-import cardTrabalhos from "@/assets/card-trabalhos.png.asset.json";
-import cardContato from "@/assets/card-contato.png.asset.json";
-import cardTrace from "@/assets/card-trace.png.asset.json";
+const BG_HERO = "/assets/bg-hero.jpg";
+const BG_HERO_MOBILE = "/assets/bg-hero-mobile.jpg";
+const BG = "/assets/bg.jpg";
+const LOGO = "/assets/logo.png";
+const CARD_TRABALHOS = "/assets/card-trabalhos.png";
+const CARD_CONTATO = "/assets/card-contato.png";
+const CARD_TRACE = "/assets/card-trace.png";
 
 const WHATSAPP = "https://wa.me/5531984815068";
 const INSTAGRAM = "https://www.instagram.com/ryan_patrick_oliveira/";
@@ -111,11 +111,11 @@ function Index() {
         {/* Fundo mobile (apenas o background anexado) e desktop (com retrato) */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-85 md:hidden"
-          style={{ backgroundImage: `url(${bgHeroMobile.url})` }}
+          style={{ backgroundImage: `url(${BG_HERO_MOBILE})` }}
         />
         <div
           className="absolute inset-0 hidden bg-cover bg-center md:block"
-          style={{ backgroundImage: `url(${bgHero.url})` }}
+          style={{ backgroundImage: `url(${BG_HERO})` }}
         />
 
         {/* Leitura do conteúdo à direita + fundido suave com a seção seguinte */}
@@ -126,7 +126,7 @@ function Index() {
         <div className="relative mx-auto flex min-h-[92svh] max-w-6xl flex-col px-6 py-7 md:px-10">
           <header className="flex items-center justify-between">
             <a href="/" aria-label="Studio Trace">
-              <img src={logoAsset.url} alt="Studio Trace" className="h-7 w-auto md:h-8" />
+              <img src={LOGO} alt="Studio Trace" className="h-7 w-auto md:h-8" />
             </a>
             <Socials className="text-white" />
           </header>
@@ -164,17 +164,17 @@ function Index() {
       <section className="relative mx-auto grid max-w-4xl gap-8 px-5 py-14 md:gap-10 md:py-24">
         <LinkCard
           href={BEHANCE}
-          src={cardTrabalhos.url}
+          src={CARD_TRABALHOS}
           alt="Ver trabalhos — um pouco dos projetos já desenvolvidos"
         />
         <LinkCard
           href={WHATSAPP}
-          src={cardContato.url}
+          src={CARD_CONTATO}
           alt="Entre em contato — vamos conversar sobre seu projeto"
         />
         <LinkCard
           href={TRACE_LP}
-          src={cardTrace.url}
+          src={CARD_TRACE}
           alt="Conheça a Trace — produção criativa recorrente"
         />
       </section>
@@ -182,7 +182,7 @@ function Index() {
       {/* FOOTER */}
       <footer
         className="relative bg-cover bg-center"
-        style={{ backgroundImage: `url(${bgAsset.url})` }}
+        style={{ backgroundImage: `url(${BG})` }}
       >
         {/* Fundido suave no topo do rodapé */}
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />

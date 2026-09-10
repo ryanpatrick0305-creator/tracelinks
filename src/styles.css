@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Drupadi";
-  src: url("/__l5e/assets-v1/6129d0bc-bf23-43e0-8180-b286a29c3cc1/Drupadi-Regular.otf") format("opentype");
+  src: url("/assets/Drupadi-Regular.otf") format("opentype");
   font-weight: 400;
   font-display: swap;
 }
